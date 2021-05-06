@@ -22,3 +22,5 @@ RUN apk update \
     && python -m amazon_dash.install \
     && apk del build-dependencies \
     && rm -rf /var/cache/apk/*
+
+CMD ["amazon-dash", "run", "--ignore-perms", "--root-allowed", "--config", "/config/amazon-dash.yml"]
